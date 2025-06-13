@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Walimatul Khitan Razza</title>
+
+  <!-- Font & Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- Font Awesome untuk ikon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- Style -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 10px 0;
+      z-index: 999;
+      text-align: center;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      color: #c54b6c;
+      text-decoration: none;
+    }
+
+    header {
+      background: url('https://i.ibb.co/gbNBZm5w/bg.jpg') no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 64px;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background-color: #c54b6c;
+      color: white;
+      padding: 12px 24px;
+      margin-top: 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      color: #c54b6c;
+      margin-bottom: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #f8e0e6;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    /* Tombol Musik */
+    #musicBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #c54b6c;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+
+      header h1 {
+        font-size: 48px;
+      }
+    }
+  </style>
+  
+  <title>Undangan</title>
+  <style>
+    header#home {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header#home h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    header#home p {
+      margin-: 1000px; /* Menurunkan paragraf */
+      font-size: 25px;
+    }
+
+    header#home .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    header#home .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  
+  <!-- detail -->>
+   <title>Thumbnail Tanggal dan Lokasi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .info-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .thumbnail {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .thumbnail:hover {
+      transform: translateY(-5px);
+    }
+
+    .thumbnail img {
+      width: 50px;
+      margin-bottom: 10px;
+    }
+
+    .thumbnail h3 {
+      margin: 10px 0 5px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .thumbnail p {
+      margin: 0;
+      color: #555;
+      font-size: 16px;
+    }
+  </style>
+  <!--tutp detail-->
+  
+  
+  
+</head>
+<body>
+
+  <!-- Musik -->
+  <audio id="bgMusic" loop>
+    <source src="islamisong.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio HTML5.
+  </audio>
+  <button id="musicBtn" onclick="toggleMusic()">🔊</button>
+
+  <!-- Navbar -->
+  <nav>
+  <!--<a href="#home"><i class="fas fa-home"></i>Home</a>
+  <a href="#detail"><i class="fas fa-ring"></i>Detail</a>
+  <a href="#lokasi"><i class="fas fa-map-marker-alt"></i>Lokasi</a>
+  <a href="#galeri"><i class="fas fa-image"></i> Galeri</a>
+  <a href="#rsvp"><i class="fas fa-envelope-open-text"></i>RSVP</a>
+  <a href="#ucapan"><i class="fas fa-comments"></i>Ucapan</a>-->
+  </nav>
+
+  <!-- Header -->
+<header id="home">
+<p style="margin-top: 300px;"></p>
+    <h1 data-aos="fade-up"></h1>
+ <!--<h1 data-aos="fade-up">AR-RazzaQu Rizqy Himawan</h1>-->
+ <h1 style="color: green;">AR-RazzaQu Rizqy Himawan</h1>
+    <p data-aos="fade-up" data-aos-delay="200"style="color: green;">Minggu, 15 Juni 2025</p>
+    <a href="#detail" class="btn" data-aos="fade-up" data-aos-delay="1000">Lihat Undangan</a>
+	 
+  </header>
+
+  <!-- Detail -->
+  <section id="detail" data-aos="fade-right">
+    <h2 class="section-title">Assalamualaikum, Warahmatullahi Wabarakatuh</h2>
+   
+<h3>Dengan memohon Rahmat & Ridho dari Allah SWT, Kami mengharap kehadiran  Bpk/Ibu/Saudar/i</h3>
+<h3>Pada Acara Tasyakuran
+Walimatul Khitan Anak kami</h3>
+  <h1 data-aos="fade-up">AR-RazzaQu Rizqy Himawan</h1>
+  </section>
+
+  
+  <h2>Detail Acara</h2>
+
+  <div class="info-box">
+    <!-- Tanggal Acara -->
+    <div class="thumbnail">
+      <img src="https://img.icons8.com/ios-filled/50/000000/calendar.png" alt="Kalender">
+      <h3>Tanggal Acara</h3>
+      <p>Minggu, 15 juni 2025 </p>
+    </div>
+
+    <!-- Lokasi Acara -->
+    <div class="thumbnail">
+      <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Lokasi">
+      <h3>Lokasi</h3>
+      <p>Kab.Banyuasin Kec,Muara Sugihan 
+Jalur 14 SP T Desa Margorukun 
+Blok C Rt 05 Rw 02<br>Palembang</p>
+    </div>
+  </div>
+    <!-- Detail -->
+  <section id="detail" data-aos="fade-right">
+   
+<h3>Merupakan suatu kehormatan  & kebahagiaan  
+Bagi kami</h3>
+<h3>Apabila Bapak/Ibu/Saudara/i 
+Berkenan Hadir</h3>
+ <h2 class="section-title">Wassalamualaikum Warahmatullahi Wabarakatuh</h2>
+  </section>
+  
+
+  <!-- Lokasi -->
+  <section id="lokasi" data-aos="fade-left">
+    <h2 class="section-title">Lokasi</h2>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1020167.0411481012!2d104.57904003731802!3d-2.808078704118993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sKab.Banyuasin%20Kec%2CMuara%20Sugihan%20%20Jalur%2014%20SP%20T%20Desa%20Margorukun%20%20Blok%20C%20Rt%2005%20Rw%2002!5e0!3m2!1sid!2sid!4v1749787723286!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+  </section>
+
+
+
+  <!-- Galeri -->
+  <!--<section id="galeri" data-aos="zoom-in">
+    <h2 class="section-title">Galeri</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200" alt="Foto 1">
+      <img src="https://via.placeholder.com/300x200" alt="Foto 2">
+      <img src="https://via.placeholder.com/300x200" alt="Foto 3">
+    </div>
+  </section>-->
+
+
+  <!-- RSVP -->
+  <section id="rsvp" data-aos="flip-left">
+    <h2 class="section-title">Konfirmasi Kehadiran</h2>
+    <p>Silakan konfirmasi kehadiran melalui WhatsApp:</p>
+    <a class="btn" href="https://wa.me/6281284288299?text=Halo%2C%20saya%20akan%20hadir%20di%20acara%20Rani%20dan%20Dika">Konfirmasi via WhatsApp</a>
+  </section>
+
+  <!-- Ucapan -->
+  <section id="ucapan" data-aos="flip-right">
+    <h2 class="section-title">Ucapan Doa</h2>
+    <form>
+      <input type="text" name="nama" placeholder="Nama Anda" required><br><br>
+      <textarea name="ucapan" rows="4" cols="40" placeholder="Tulis ucapan..." required></textarea><br><br>
+      <button type="submit" class="btn">Kirim</button>
+    </form>
+  </section>
+  
+  <!--music-->
+   <!-- Audio Element -->
+<audio id="bgMusic" loop>
+  <source src="islamisong.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung audio HTML5.
+</audio>
+
+<!-- Floating Button -->
+<button onclick="playMusic()" id="musicBtn" title="Putar Musik">
+  🎵
+</button>
+
+<!-- Style untuk tombol -->
+<style>
+  #musicBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 9999;
+  }
+
+  #musicBtn:hover {
+    background-color: #128C7E;
+  }
+</style>
+
+<!-- Script untuk play musik -->
+<script>
+  function playMusic() {
+    const music = document.getElementById("bgMusic");
+    music.play();
+  }
+</script>
+  
+  
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Rani & Dika Wedding | Undangan digital by <a href="https://kemasanpack.com/">kemasanpack</a>
+  </footer>
+
+  <!-- Script Musik & AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const music = document.getElementById("bgMusic");
+    const musicBtn = document.getElementById("musicBtn");
+    let isPlaying = false;
+
+    function toggleMusic() {
+      if (!isPlaying) {
+        music.play();
+        isPlaying = true;
+        musicBtn.textContent = "⏸️";
+      } else {
+        music.pause();
+        isPlaying = false;
+        musicBtn.textContent = "🔊";
+      }
+    }
+
+    // Auto play on load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        music.play().catch(() => {});
+        isPlaying = true;
+        musicBtn.textContent = "⏸️";
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
